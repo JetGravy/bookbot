@@ -1,4 +1,4 @@
-from stats import count_words
+from stats import count_words, count_characters
 
 '''
     take in file path of book, output as string
@@ -19,6 +19,8 @@ def main():
     book_text: str = get_book_text(input)
     word_count: int = count_words(book_text)
     print(f"{word_count} words found in the document")
+    character_count: dict[str, int] = count_characters(book_text)
+    print(character_count)
 
 if __name__ == "__main__":
     main()
