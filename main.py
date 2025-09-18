@@ -1,3 +1,4 @@
+import sys
 from stats import count_words, count_characters, sort_letters
 
 '''
@@ -11,10 +12,9 @@ def get_book_text(book_path: str):
 '''
     main
 '''
-def main():
+def main(input: str):
     
-    # Get report
-    input: str = 'books/frankenstein.txt'
+    # Create report
     book_text: str = get_book_text(input)
     word_count: int = count_words(book_text)
     log = count_characters(book_text)
@@ -34,4 +34,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        
+    main(sys.argv[1])

@@ -21,6 +21,9 @@ def count_characters(book: str) -> dict [str, int]:
 
     return sort_letters(letters)
 
+'''
+    helper function
+'''
 def sort_on(items):
     return items["num"]
 
